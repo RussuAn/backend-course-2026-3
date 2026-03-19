@@ -5,7 +5,7 @@ const program = new Command();
 
 program.configureOutput({
   outputError: (str, write) => {
-    if (str.includes("required option")) {
+    if (str.includes("required option") || str.includes("argument missing")) {
       write("Please, specify input file\n");
     } else {
       write(str);
